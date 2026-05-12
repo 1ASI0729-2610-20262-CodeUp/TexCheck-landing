@@ -66,4 +66,75 @@
       </nav>
     </div>
   </header>
+    <main id="top">
+
+    <!-- ───────── HERO (bg: white → soft gradient) ───────── -->
+    <section class="hero section-space">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Plataforma Inteligente de Mantenimiento</p>
+          <h1 data-i18n="hero.h1">Optimiza la Producción Textil con Mantenimiento Inteligente</h1>
+          <p class="hero-lead" data-i18n="hero.lead">
+            Reduce paradas de máquina, digitaliza flujos de mantenimiento y obtén visibilidad total de tus operaciones textiles con una sola plataforma conectada.
+          </p>
+          <div class="hero-cta-row">
+            <a href="#contact" class="btn btn-dark" data-i18n="hero.cta_demo">Solicitar demo</a>
+            <button class="btn btn-light" id="watchVideoBtn" type="button">
+              <span class="play-dot" aria-hidden="true">▶</span>
+              <span data-i18n="hero.cta_video">Ver video</span>
+            </button>
+          </div>
+          <div class="social-proof">
+            <div class="avatars" aria-label="Trusted users">
+              <img src="assets/images/camFoto.png" alt="User testimonial 1" />
+              <img src="assets/images/Sofia.png" alt="User testimonial 2" />
+              <img src="assets/images/sebasFoto.png" alt="User testimonial 3" />
+            </div>
+            <div class="rating-copy">
+              <p class="stars">★★★★★</p>
+              <p data-i18n="hero.social_proof">Con la confianza de más de 200 equipos textiles en todo el mundo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <article class="dashboard-card" aria-label="Panel de rendimiento de máquinas">
+            <div class="kpis">
+              <div>
+                <p class="kpi-label" data-i18n="kpis.availability">Disponibilidad</p>
+                <p class="kpi-value">98.7%</p>
+              </div>
+              <div>
+                <p class="kpi-label" data-i18n="kpis.alerts">Alertas</p>
+                <p class="kpi-value">12</p>
+              </div>
+              <div>
+                <p class="kpi-label" data-i18n="kpis.tasks">Tareas</p>
+                <p class="kpi-value">41</p>
+              </div>
+            </div>
+            <h3 data-i18n="kpis.chart_title">Rendimiento de Máquinas</h3>
+            <div class="chart-wrap">
+              <svg viewBox="0 0 460 220" role="img" aria-label="Gráfico de tendencia de rendimiento">
+                <defs>
+                  <linearGradient id="chartStroke" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#14b85a" />
+                    <stop offset="100%" stop-color="#30d073" />
+                  </linearGradient>
+                  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#22c55e" stop-opacity="0.28" />
+                    <stop offset="100%" stop-color="#22c55e" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <path class="grid-line" d="M10 35 H450" />
+                <path class="grid-line" d="M10 95 H450" />
+                <path class="grid-line" d="M10 155 H450" />
+                <path d="M20 170 C85 145, 120 130, 165 140 C220 152, 245 95, 295 86 C340 78, 390 55, 440 32 L440 200 L20 200 Z" fill="url(#chartFill)" />
+                <path d="M20 170 C85 145, 120 130, 165 140 C220 152, 245 95, 295 86 C340 78, 390 55, 440 32" fill="none" stroke="url(#chartStroke)" stroke-width="8" stroke-linecap="round" />
+              </svg>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 </html>
