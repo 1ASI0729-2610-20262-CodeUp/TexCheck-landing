@@ -43,3 +43,49 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     target.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
+const watchVideoBtn   = document.getElementById("watchVideoBtn");
+const videoPreviewBtn = document.getElementById("videoPreviewBtn");
+const videoModal      = document.getElementById("videoModal");
+const closeModalNodes = document.querySelectorAll("[data-close-modal]");
+const demoVideo       = document.getElementById("demoVideo");
+
+function openVideoModal() {
+  if (!videoModal) return;
+  videoModal.classList.add("is-open");
+  videoModal.setAttribute("aria-hidden", "false");
+  body.style.overflow = "hidden";
+  if (demoVideo) {
+    demoVideo.currentTime = 0;
+    demoVideo.play().catch(() => {});
+  }
+}
+
+function closeVideoModal() {
+  if (!videoModal) return;
+  videoModal.classList.remove("is-open");
+  videoModal.setAttribute("aria-hidden", "true");
+  body.style.overflow = "";
+  if (demoVideo) {
+    demoVideo.pause();
+    demoVideo.currentTime = 0;
+  }
+}
+
+watchVideoBtn?.addEventListener("click", openVideoModal);
+videoPreviewBtn?.addEventListener("click", openVideoModal);
+closeModalNodes.forEach((node) => node.addEventListener("click", closeVideoModal));
+
+// ── Auth modal ────────────────────────────────────────────────────────────────
+const authModal      = document.getElementById("authModal");
+const authBackdrop   = document.getElementById("authBackdrop");
+const closeAuthBtn   = document.getElementById("closeAuthBtn");
+const loginPanel     = document.getElementById("loginPanel");
+const signupPanel    = document.getElementById("signupPanel");
+const goToSignupBtn  = document.getElementById("goToSignupBtn");
+const goToLoginBtn   = document.getElementById("goToLoginBtn");
+
+// Buttons that open the auth modal
+const openLoginBtns = [
+  document.getElementById("openLoginBtn"),
+  document.getElementById("openLoginBtnMobile"),
+];
