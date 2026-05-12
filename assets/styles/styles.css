@@ -20,3 +20,33 @@
   --radius-md: 16px;
   --container: min(92vw, 1220px);
 }
+
+
+*, *::before, *::after { box-sizing: border-box; }
+html  { scroll-behavior: smooth; }
+body  {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text-900);
+  background: var(--white);
+  line-height: 1.45;
+}
+a   { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.container {
+  width: var(--container);
+  margin-inline: auto;
+}
+.section-space      { padding: 100px 0; }
+.section-space-lg   { padding: 120px 0; }
+
+.section-head { max-width: 720px; margin-bottom: 56px; }
+.section-head.center { margin-inline: auto; text-align: center; }
+.section-head h2 {
+  margin: 0;
+  font-size: clamp(1.9rem, 2.8vw, 2.7rem);
+  line-height: 1.13;
+  letter-spacing: -0.02em;
+}
+.section-head p { margin: 14px 0 0; color: var(--text-500); font-size: 1.04rem; }
