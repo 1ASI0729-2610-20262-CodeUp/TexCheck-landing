@@ -247,3 +247,59 @@ img { max-width: 100%; display: block; }
 .icon-blue  { background: #dbeafe; color: #1d4ed8; }
 .info-card h3 { margin: 0; font-size: 1.13rem; }
 .info-card p  { margin: 12px 0 0; color: var(--text-500); line-height: 1.6; }
+
+.improves {
+  background: radial-gradient(circle at 80% 20%, #18366a 0%, var(--navy-950) 55%, #050b1d 100%);
+  color: var(--white);
+}
+.improves .section-head h2  { color: var(--white); }
+.improves .section-head p   { color: #9eb0ca; }
+
+.split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+
+/* Mockup */
+.mockup-box {
+  background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius-xl); box-shadow: 0 24px 56px rgba(0,0,0,.35); padding: 20px;
+}
+.mockup-shell { background: #edf3fb; border-radius: 18px; overflow: hidden; border: 1px solid #dce4f0; }
+.mockup-topbar {
+  display: flex; gap: 7px; padding: 12px 14px;
+  border-bottom: 1px solid #d7e0ec; background: #f7fbff;
+}
+.mockup-topbar span { width: 9px; height: 9px; border-radius: 50%; background: #b1bfd0; }
+.mockup-content { min-height: 360px; display: grid; grid-template-columns: 180px 1fr; }
+.mockup-content aside { background: #102248; color: rgba(255,255,255,.82); padding: 18px 16px; }
+.side-title { margin: 0 0 16px; color: #fff; font-weight: 700; }
+.mockup-content ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.mockup-content li { padding: 8px 10px; border-radius: 8px; font-size: 0.85rem; }
+.mockup-content li.active { background: rgba(255,255,255,.18); color: #fff; }
+.mock-main { padding: 18px; display: grid; gap: 14px; background: #f8fbff; }
+.mock-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+.mock-stats div {
+  background: #fff; border: 1px solid #dfe8f4; border-radius: 12px;
+  padding: 10px; display: grid; gap: 4px;
+}
+.mock-stats strong { font-size: 1rem; }
+.mock-stats span   { font-size: 0.77rem; color: var(--text-500); }
+.mock-chart {
+  min-height: 120px; border-radius: 14px; border: 1px solid #dce5f2;
+  background: linear-gradient(160deg, #e9f8ef, #f8fbff 56%);
+}
+.mock-table {
+  min-height: 86px; border-radius: 12px; border: 1px solid #dce5f2;
+  background: repeating-linear-gradient(to bottom, #fff, #fff 18px, #f2f6fb 18px, #f2f6fb 36px);
+}
+
+/* Copy dentro de solution (tema oscuro) */
+.improves-copy h2 { margin: 0; font-size: clamp(1.8rem,3.2vw,2.6rem); line-height: 1.12; color: var(--white); }
+.improves-copy > p { margin: 16px 0 0; color: #9eb0ca; }
+
+.benefits-list { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 20px; }
+.benefits-list li { display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: flex-start; }
+.bullet-icon {
+  width: 36px; height: 36px; border-radius: 50%; display: grid; place-content: center;
+  background: rgba(34,197,94,.18); color: var(--green-400); border: 1px solid rgba(34,197,94,.3); line-height: 1;
+}
+.benefits-list h3 { margin: 2px 0 0; font-size: 1rem; color: var(--white); }
+.benefits-list p  { margin: 7px 0 0; color: #a0b5ce; font-size: 0.95rem; }
