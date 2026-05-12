@@ -559,4 +559,100 @@
       </div>
     </div>
   </footer>
+  
+  <!-- ───────── VIDEO MODAL ───────── -->
+  <div class="video-modal" id="videoModal" aria-hidden="true" role="dialog" aria-label="Modal de video">
+    <div class="video-modal-backdrop" data-close-modal></div>
+    <div class="video-modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar video">×</button>
+      <div class="modal-video-placeholder">
+        <video id="demoVideo" controls preload="metadata" playsinline>
+          <source src="assets/video-preview.mp4" type="video/mp4" />
+          Tu navegador no soporta la reproducción de video.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- ───────── AUTH MODAL (Login + Signup) ───────── -->
+  <div class="auth-modal" id="authModal" aria-hidden="true" role="dialog">
+    <div class="auth-modal-backdrop" id="authBackdrop"></div>
+    <div class="auth-modal-panel">
+      <button class="modal-close auth-modal-close" type="button" id="closeAuthBtn" aria-label="Cerrar">×</button>
+
+      <!-- LOGIN PANEL -->
+      <div class="auth-panel" id="loginPanel">
+        <div class="auth-brand">
+          <img src="assets/images/TexCheck.png" alt="TexCheck Logo" class="brand-logo" width="110" />
+        </div>
+        <h2 data-i18n="auth.login_title">Bienvenido de nuevo</h2>
+        <p class="auth-sub" data-i18n="auth.login_sub">Accede a tu cuenta TexCheck</p>
+
+        <div class="auth-form">
+          <div class="auth-field">
+            <label for="loginEmail" data-i18n="auth.email">Correo electrónico</label>
+            <input type="email" id="loginEmail" autocomplete="email" data-i18n-attr="placeholder" data-i18n="auth.email" placeholder="Correo electrónico" />
+          </div>
+          <div class="auth-field">
+            <div class="auth-field-row">
+              <label for="loginPassword" data-i18n="auth.password">Contraseña</label>
+              <a href="#" class="auth-forgot" data-i18n="auth.forgot">¿Olvidaste tu contraseña?</a>
+            </div>
+            <input type="password" id="loginPassword" autocomplete="current-password" data-i18n-attr="placeholder" data-i18n="auth.password" placeholder="Contraseña" />
+          </div>
+          <button type="button" class="btn btn-dark auth-submit" id="loginSubmitBtn">
+            <span data-i18n="auth.login_btn">Iniciar sesión</span>
+          </button>
+        </div>
+
+        <p class="auth-switch">
+          <span data-i18n="auth.no_account">¿No tienes cuenta?</span>
+          <button type="button" class="auth-switch-btn" id="goToSignupBtn" data-i18n="auth.signup_link">Regístrate</button>
+        </p>
+      </div>
+
+      <!-- SIGNUP PANEL -->
+      <div class="auth-panel auth-panel-hidden" id="signupPanel">
+        <div class="auth-brand">
+          <img src="assets/images/TexCheck.png" alt="TexCheck Logo" class="brand-logo" width="110" />
+        </div>
+        <h2 data-i18n="auth.signup_title">Crea tu cuenta</h2>
+        <p class="auth-sub" data-i18n="auth.signup_sub">Empieza tu prueba gratis — sin tarjeta de crédito</p>
+
+        <div class="auth-form">
+          <div class="auth-field">
+            <label for="signupName" data-i18n="auth.name">Nombre completo</label>
+            <input type="text" id="signupName" autocomplete="name" data-i18n-attr="placeholder" data-i18n="auth.name" placeholder="Nombre completo" />
+          </div>
+          <div class="auth-field">
+            <label for="signupCompany" data-i18n="auth.company">Empresa</label>
+            <input type="text" id="signupCompany" autocomplete="organization" data-i18n-attr="placeholder" data-i18n="auth.company" placeholder="Empresa" />
+          </div>
+          <div class="auth-field">
+            <label for="signupEmail" data-i18n="auth.email">Correo electrónico</label>
+            <input type="email" id="signupEmail" autocomplete="email" data-i18n-attr="placeholder" data-i18n="auth.email" placeholder="Correo electrónico" />
+          </div>
+          <div class="auth-field">
+            <label for="signupPassword" data-i18n="auth.password">Contraseña</label>
+            <input type="password" id="signupPassword" autocomplete="new-password" data-i18n-attr="placeholder" data-i18n="auth.password" placeholder="Contraseña" />
+          </div>
+          <div class="auth-field">
+            <label for="signupConfirm" data-i18n="auth.confirm_password">Confirmar contraseña</label>
+            <input type="password" id="signupConfirm" autocomplete="new-password" data-i18n-attr="placeholder" data-i18n="auth.confirm_password" placeholder="Confirmar contraseña" />
+          </div>
+          <button type="button" class="btn btn-green auth-submit" id="signupSubmitBtn">
+            <span data-i18n="auth.signup_btn">Crear cuenta</span>
+          </button>
+        </div>
+
+        <p class="auth-switch">
+          <span data-i18n="auth.have_account">¿Ya tienes cuenta?</span>
+          <button type="button" class="auth-switch-btn" id="goToLoginBtn" data-i18n="auth.login_link">Iniciar sesión</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="assets/js/script.js"></script>
+</body>
 </html>
