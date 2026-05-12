@@ -3,387 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TexCheck | Plataforma Inteligente de Mantenimiento</title>
+  <title>TexCheck</title>
   <meta name="description" content="Optimiza la producción textil con flujos de mantenimiento inteligentes y monitoreo de equipos en tiempo real." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/styles/styles.css" />
 </head>
 <body>
+  <!-- ───────── HEADER ───────── -->
   <header class="site-header">
     <div class="container nav-wrap">
       <a href="#top" class="brand" aria-label="TexCheck home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">TexCheck</span>
+        <img 
+          src="assets/images/TexCheck.png" 
+          alt="TexCheck Logo" 
+          class="brand-logo"
+          width="120"
+        />
       </a>
 
       <nav class="desktop-nav" aria-label="Navegación principal">
-        <a href="#features">Funciones</a>
-        <a href="#solution">Solución</a>
-        <a href="#pricing">Precios</a>
-        <a href="#contact">Contacto</a>
+        <a href="#solution"  data-i18n="nav.solution">Solución</a>
+        <a href="#features"  data-i18n="nav.features">Funciones</a>
+        <a href="#about"     data-i18n="nav.about">Nosotros</a>
+        <a href="#dev-team"  data-i18n="nav.team">Equipo</a>
+        <a href="#contact"   data-i18n="nav.contact">Contacto</a>
       </nav>
 
       <div class="nav-actions desktop-actions">
-        <a href="#" class="login-link">Iniciar sesión</a>
-        <a href="#contact" class="btn btn-dark">Solicitar demo</a>
+        <!-- Locale switcher -->
+        <div class="locale-switcher" aria-label="Language switcher">
+          <button class="locale-btn" data-locale-btn="es" aria-pressed="true">ES</button>
+          <span class="locale-sep">|</span>
+          <button class="locale-btn" data-locale-btn="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="login-link" id="openLoginBtn" data-i18n="nav.login">Iniciar sesión</button>
+        <a href="#contact" class="btn btn-dark" data-i18n="nav.demo">Solicitar demo</a>
       </div>
 
       <div class="mobile-actions">
-        <a href="#contact" class="btn btn-dark btn-mobile-demo">Solicitar demo</a>
+        <div class="locale-switcher locale-switcher-sm" aria-label="Language switcher">
+          <button class="locale-btn" data-locale-btn="es" aria-pressed="true">ES</button>
+          <span class="locale-sep">|</span>
+          <button class="locale-btn" data-locale-btn="en" aria-pressed="false">EN</button>
+        </div>
+        <a href="#contact" class="btn btn-dark btn-mobile-demo" data-i18n="nav.demo">Solicitar demo</a>
         <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Abrir menú">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
 
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <nav aria-label="Navegación móvil">
-        <a href="#features" class="mobile-link">Funciones</a>
-        <a href="#solution" class="mobile-link">Solución</a>
-        <a href="#pricing" class="mobile-link">Precios</a>
-        <a href="#contact" class="mobile-link">Contacto</a>
-        <a href="#" class="mobile-link">Iniciar sesión</a>
+        <a href="#features" class="mobile-link" data-i18n="nav.features">Funciones</a>
+        <a href="#solution" class="mobile-link" data-i18n="nav.solution">Solución</a>
+        <a href="#about"    class="mobile-link" data-i18n="nav.about">Nosotros</a>
+        <a href="#dev-team" class="mobile-link" data-i18n="nav.team">Equipo</a>
+        <a href="#contact"  class="mobile-link" data-i18n="nav.contact">Contacto</a>
+        <button class="mobile-link mobile-login-btn" id="openLoginBtnMobile" data-i18n="nav.login">Iniciar sesión</button>
       </nav>
     </div>
   </header>
-
-  <main id="top">
-    <section class="hero section-space">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Plataforma Inteligente de Mantenimiento</p>
-          <h1>Optimiza la Producción Textil con Mantenimiento Inteligente</h1>
-          <p class="hero-lead">
-            Reduce paradas de máquina, digitaliza flujos de mantenimiento y obtén visibilidad total de tus operaciones textiles con una sola plataforma conectada.
-          </p>
-          <div class="hero-cta-row">
-            <a href="#contact" class="btn btn-dark">Solicitar demo</a>
-            <button class="btn btn-light" id="watchVideoBtn" type="button">
-              <span class="play-dot" aria-hidden="true">▶</span>
-              Ver video
-            </button>
-          </div>
-          <div class="social-proof">
-            <div class="avatars" aria-label="Trusted users">
-              <!-- Replace placeholders with real avatars -->
-              <img src="assets/avatar-1.jpg" alt="User testimonial 1" />
-              <img src="assets/avatar-2.jpg" alt="User testimonial 2" />
-              <img src="assets/avatar-3.jpg" alt="User testimonial 3" />
-            </div>
-            <div class="rating-copy">
-              <p class="stars">★★★★★</p>
-              <p>Con la confianza de más de 200 equipos textiles en todo el mundo</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-panel">
-          <article class="dashboard-card" aria-label="Panel de rendimiento de máquinas">
-            <div class="kpis">
-              <div>
-                <p class="kpi-label">Disponibilidad</p>
-                <p class="kpi-value">98.7%</p>
-              </div>
-              <div>
-                <p class="kpi-label">Alertas</p>
-                <p class="kpi-value">12</p>
-              </div>
-              <div>
-                <p class="kpi-label">Tareas</p>
-                <p class="kpi-value">41</p>
-              </div>
-            </div>
-            <h3>Rendimiento de Máquinas</h3>
-            <div class="chart-wrap">
-              <svg viewBox="0 0 460 220" role="img" aria-label="Gráfico de tendencia de rendimiento">
-                <defs>
-                  <linearGradient id="chartStroke" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#14b85a" />
-                    <stop offset="100%" stop-color="#30d073" />
-                  </linearGradient>
-                  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#22c55e" stop-opacity="0.28" />
-                    <stop offset="100%" stop-color="#22c55e" stop-opacity="0" />
-                  </linearGradient>
-                </defs>
-                <path class="grid-line" d="M10 35 H450" />
-                <path class="grid-line" d="M10 95 H450" />
-                <path class="grid-line" d="M10 155 H450" />
-                <path d="M20 170 C85 145, 120 130, 165 140 C220 152, 245 95, 295 86 C340 78, 390 55, 440 32 L440 200 L20 200 Z" fill="url(#chartFill)" />
-                <path d="M20 170 C85 145, 120 130, 165 140 C220 152, 245 95, 295 86 C340 78, 390 55, 440 32" fill="none" stroke="url(#chartStroke)" stroke-width="8" stroke-linecap="round" />
-              </svg>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="challenges section-space">
-      <div class="container">
-        <div class="section-head center">
-          <h2>Desafíos de Mantenimiento en la Manufactura Textil</h2>
-          <p>Las plantas textiles enfrentan retrasos evitables y pérdidas de calidad cuando el mantenimiento está desconectado de las prioridades de producción.</p>
-        </div>
-
-        <div class="card-grid three-cols">
-          <article class="info-card">
-            <span class="card-icon icon-red" aria-hidden="true">⚠</span>
-            <h3>Fallas Inesperadas de Máquinas</h3>
-            <p>Las averías no planificadas interrumpen la producción y generan cuellos de botella costosos en líneas críticas.</p>
-          </article>
-
-          <article class="info-card">
-            <span class="card-icon icon-amber" aria-hidden="true">🗂</span>
-            <h3>Registros Manuales de Mantenimiento</h3>
-            <p>Las bitácoras en papel y planillas vuelven el seguimiento de tareas lento, propenso a errores y difícil de auditar.</p>
-          </article>
-
-          <article class="info-card">
-            <span class="card-icon icon-blue" aria-hidden="true">👁</span>
-            <h3>Falta de Visibilidad de Equipos</h3>
-            <p>Los equipos tienen dificultades para detectar patrones de desgaste sin estado en tiempo real y contexto histórico.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="improves section-space" id="solution">
-      <div class="container split-grid">
-        <div class="mockup-box">
-          <div class="mockup-shell">
-            <div class="mockup-topbar">
-              <span></span><span></span><span></span>
-            </div>
-            <div class="mockup-content">
-              <aside>
-                <p class="side-title">TexCheck</p>
-                <ul>
-                  <li class="active">Resumen</li>
-                  <li>Activos</li>
-                  <li>Programación</li>
-                  <li>Fallas</li>
-                </ul>
-              </aside>
-              <div class="mock-main">
-                <div class="mock-stats">
-                  <div><strong>114</strong><span>Tareas Abiertas</span></div>
-                  <div><strong>92%</strong><span>MP a Tiempo</span></div>
-                  <div><strong>17</strong><span>Alertas Críticas</span></div>
-                </div>
-                <div class="mock-chart"></div>
-                <div class="mock-table"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="improves-copy">
-          <h2>Cómo TexCheck Mejora la Gestión del Mantenimiento</h2>
-          <p>Desde los datos de máquina hasta la ejecución de mantenimiento, TexCheck conecta todo el ciclo en una sola vista operativa.</p>
-
-          <ul class="benefits-list">
-            <li>
-              <span class="bullet-icon">●</span>
-              <div>
-                <h3>Monitoreo de Equipos en Tiempo Real</h3>
-                <p>Sigue tendencias de rendimiento y condición en vivo para prevenir fallas antes de que escalen.</p>
-              </div>
-            </li>
-            <li>
-              <span class="bullet-icon">●</span>
-              <div>
-                <h3>Registros Digitales de Mantenimiento</h3>
-                <p>Registra intervenciones, repuestos y notas técnicas en un historial de mantenimiento consultable.</p>
-              </div>
-            </li>
-            <li>
-              <span class="bullet-icon">●</span>
-              <div>
-                <h3>Programación de Mantenimiento Preventivo</h3>
-                <p>Automatiza tareas recurrentes y activa órdenes de trabajo según ciclos operativos y umbrales.</p>
-              </div>
-            </li>
-            <li>
-              <span class="bullet-icon">●</span>
-              <div>
-                <h3>Panel Centralizado de Mantenimiento</h3>
-                <p>Unifica KPIs de planta para que mantenimiento y operaciones prioricen con confianza.</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="features-dark section-space" id="features">
-      <div class="container">
-        <div class="section-head center dark-head">
-          <h2>Funciones de la Plataforma</h2>
-          <p>Todo lo que tu equipo de mantenimiento necesita para operar con menos paradas y mayor control.</p>
-        </div>
-
-        <div class="card-grid four-cols dark-cards">
-          <article class="feature-card">
-            <span class="feature-icon teal">◉</span>
-            <h3>Monitoreo de Equipos</h3>
-            <p>Estado, uso y señales de condición en vivo en un solo flujo operativo consolidado.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon amber">◉</span>
-            <h3>Programación de Mantenimiento</h3>
-            <p>Coordina tareas recurrentes y correctivas con vistas de calendario y asignación inteligente.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon green">◉</span>
-            <h3>Seguimiento de Fallas</h3>
-            <p>Registra incidentes, causas raíz y acciones correctivas para reducir interrupciones repetidas.</p>
-          </article>
-          <article class="feature-card">
-            <span class="feature-icon sky">◉</span>
-            <h3>Panel Analítico</h3>
-            <p>Mide MTBF, MTTR, cumplimiento y tendencias de carga para optimizar la estrategia de mantenimiento.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="video-section section-space" id="pricing">
-      <div class="container">
-        <div class="section-head center">
-          <h2>Ve TexCheck en Acción</h2>
-          <p>Descubre cómo los equipos textiles monitorean activos, ejecutan mantenimiento y mejoran la disponibilidad en una sola plataforma.</p>
-        </div>
-
-        <button class="video-preview" id="videoPreviewBtn" type="button" aria-label="Reproducir vista previa de video de TexCheck">
-          <span class="video-preview-fallback" aria-hidden="true">
-            <span class="video-preview-kicker">Video disponible</span>
-            <span class="video-preview-title">Reproducir demostración</span>
-          </span>
-          <span class="video-overlay"></span>
-          <span class="video-play">▶</span>
-        </button>
-      </div>
-    </section>
-
-    <section class="team section-space">
-      <div class="container">
-        <div class="section-head center">
-          <h2>Creado para tu Equipo</h2>
-          <p>Experiencias diseñadas para cada rol involucrado en el mantenimiento textil y el rendimiento de planta.</p>
-        </div>
-
-        <div class="team-grid">
-          <article class="team-card">
-            <span class="team-icon">🛠</span>
-            <h3>Para Técnicos de Mantenimiento</h3>
-            <ul>
-              <li>Órdenes de trabajo móviles guiadas con prioridades claras</li>
-              <li>Checklists digitales y actualización instantánea del estado</li>
-              <li>Acceso rápido al historial de máquinas y reparaciones</li>
-            </ul>
-          </article>
-
-          <article class="team-card">
-            <span class="team-icon">📈</span>
-            <h3>Para Gerentes de Planta</h3>
-            <ul>
-              <li>KPIs en vivo de paradas, backlog y cumplimiento</li>
-              <li>Visibilidad transversal de tendencias de salud de equipos</li>
-              <li>Decisiones de mantenimiento y producción basadas en datos</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta section-space" id="contact">
-      <div class="container cta-inner">
-        <h2>¿Listo para optimizar tus operaciones de mantenimiento?</h2>
-        <p>Agenda una demostración personalizada y descubre cómo TexCheck puede reducir paradas en tu planta textil.</p>
-        <a href="#" class="btn btn-green">Solicitar demo</a>
-
-        <div class="cta-stats">
-          <div><strong>35%</strong><span>Menos Paradas No Planificadas</span></div>
-          <div><strong>2.4x</strong><span>Cierre Más Rápido de Órdenes</span></div>
-          <div><strong>99.2%</strong><span>Cumplimiento de Mantenimiento</span></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <a href="#top" class="brand footer-brand-link">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span class="brand-text">TexCheck</span>
-        </a>
-        <p>
-          Software inteligente de mantenimiento para fabricantes textiles que buscan mayor disponibilidad, flujos más limpios y mejores decisiones.
-        </p>
-        <div class="socials" aria-label="Social links">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="X">x</a>
-          <a href="#" aria-label="YouTube">▶</a>
-        </div>
-      </div>
-
-      <div class="footer-col">
-        <h4>Producto</h4>
-        <a href="#features">Funciones</a>
-        <a href="#solution">Solución</a>
-        <a href="#pricing">Precios</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Compañía</h4>
-        <a href="#">Nosotros</a>
-        <a href="#">Carreras</a>
-        <a href="#">Clientes</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contacto</h4>
-        <a href="#contact">Solicitar demo</a>
-        <a href="mailto:hello@texcheck.io">hello@texcheck.io</a>
-        <a href="tel:+18001234567">+1 (800) 123-4567</a>
-      </div>
-    </div>
-
-    <div class="container footer-bottom">
-      <p>© 2026 TexCheck. Todos los derechos reservados.</p>
-      <div>
-        <a href="#">Política de Privacidad</a>
-        <a href="#">Términos de Servicio</a>
-      </div>
-    </div>
-  </footer>
-
-  <div class="video-modal" id="videoModal" aria-hidden="true" role="dialog" aria-label="Modal de video">
-    <div class="video-modal-backdrop" data-close-modal></div>
-    <div class="video-modal-panel">
-      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar video">×</button>
-      <div class="modal-video-placeholder">
-        <iframe
-          id="demoVideo"
-          width="560"
-          height="315"
-          data-src="https://www.youtube.com/embed/Nj2XcDcLQQk?si=sCaWYBpiZJ0keMdN"
-          src="https://www.youtube.com/embed/Nj2XcDcLQQk?si=sCaWYBpiZJ0keMdN"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
 </html>
