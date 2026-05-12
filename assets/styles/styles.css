@@ -552,3 +552,43 @@ img { max-width: 100%; display: block; }
   font-weight: 600; color: var(--navy-900); padding: 0; transition: color .18s;
 }
 .auth-switch-btn:hover { color: #1d8b54; }
+
+@media (max-width: 1080px) {
+  .about-grid       { grid-template-columns: 1fr; gap: 40px; }
+  .dev-team-grid    { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .benefits-big-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .product-highlights { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .desktop-nav, .nav-actions.desktop-actions { display: none; }
+  .mobile-actions, .mobile-menu { display: block; }
+  .mobile-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; }
+  .btn-mobile-demo { padding-inline: 16px; }
+  .hero-grid, .split-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-panel { justify-content: flex-start; }
+  .four-cols  { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .three-cols { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .dev-team-grid .dev-card:nth-child(4),
+  .dev-team-grid .dev-card:nth-child(5) { grid-column: span 1; }
+}
+
+@media (max-width: 760px) {
+  .section-space  { padding: 76px 0; }
+  .nav-wrap       { height: 68px; }
+  .btn-mobile-demo { font-size: 0.87rem; padding: 10px 14px; }
+  .hero           { padding-top: 52px; padding-bottom: 76px; }
+  .hero-copy h1   { max-width: 100%; }
+  .hero-cta-row   { flex-wrap: wrap; }
+  .dashboard-card { padding: 20px 16px 14px; }
+  .kpis           { grid-template-columns: 1fr; }
+  .mockup-content { grid-template-columns: 1fr; }
+  .mockup-content aside { display: none; }
+  .four-cols      { grid-template-columns: 1fr; }
+  .cta-stats      { grid-template-columns: 1fr; }
+  .footer-grid    { grid-template-columns: 1fr; }
+  .footer-bottom  { flex-direction: column; justify-content: center; text-align: center; padding-bottom: 18px; }
+  .dev-team-grid  { grid-template-columns: 1fr; }
+  .benefits-big-grid { grid-template-columns: 1fr; }
+  .product-highlights { grid-template-columns: 1fr; }
+  .about-stats-grid { grid-template-columns: 1fr 1fr; }
+  .auth-modal-panel { padding: 32px 22px 28px; }
+}
